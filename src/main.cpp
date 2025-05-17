@@ -14,6 +14,9 @@ int main() {
     int *iptr = &i;
     std::cout << *iptr << std::endl; // Dereference the pointer and printe the value
     *iptr = 42;  // Dereference the pointer, and set the value
+
+    j = *iptr; // Copy the value of i into j, not the address, so j is always 42
+    std::cout << j << std::endl; // Print the value of j
     
     // Basic pointers
     basicPointerExample();
