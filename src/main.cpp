@@ -6,9 +6,14 @@
 int main() {
     std::cout << "C++20 Pointer Demonstration Program" << std::endl;
 
-
+    // Add a variable that we can inspect in the debugger
     int i = 20;
+    int j = 30;
+    std::cout << &i << std::endl;
+    j = i; // Copy the value of i into j, not the address, so j is always 20
     int *iptr = &i;
+    std::cout << *iptr << std::endl; // Dereference the pointer and printe the value
+    *iptr = 42;  // Dereference the pointer, and set the value
     
     // Basic pointers
     basicPointerExample();
